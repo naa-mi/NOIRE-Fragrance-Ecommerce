@@ -1,0 +1,672 @@
+﻿
+<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Designpage.master.cs" Inherits="Project1.Designpage" %>
+
+<!DOCTYPE html>
+<html>
+<head runat="server">
+    <meta charset="UTF-8">
+    <meta name="description" content="NOIRÉ Luxury Fragrances">
+    <meta name="keywords" content="NOIRÉ, perfumes, oud, scented candles, reed diffusers, gift sets">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>NOIRÉ | Luxury Fragrances</title>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Cookie&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+    <!-- CSS Styles -->
+    <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
+    <link rel="stylesheet" href="css/font-awesome.min.css" type="text/css">
+    <link rel="stylesheet" href="css/elegant-icons.css" type="text/css">
+    <link rel="stylesheet" href="css/jquery-ui.min.css" type="text/css">
+    <link rel="stylesheet" href="css/magnific-popup.css" type="text/css">
+    <link rel="stylesheet" href="css/owl.carousel.min.css" type="text/css">
+    <link rel="stylesheet" href="css/slicknav.min.css" type="text/css">
+    <link rel="stylesheet" href="css/style.css" type="text/css">
+
+    <style type="text/css">
+
+  
+/* ==============================
+   NOIRÉ — LIGHT LUXURY THEME
+================================ */
+
+body {
+    background-color: #F8F4F0;
+    color: #302627;
+    font-family: "Montserrat", sans-serif;
+}
+
+/* ==============================
+   HEADER
+================================ */
+
+.header {
+    background-color: #FFFDFB !important;
+    border-bottom: 1px solid #E8D9D5;
+}
+
+.header__logo img,
+.offcanvas__logo img,
+.footer__logo img {
+    max-height: 65px;
+    width: auto;
+}
+
+.header__menu ul li a {
+    color: #302627 !important;
+}
+
+.header__menu ul li:hover > a,
+.header__menu ul li.active > a {
+    color: #984E59 !important;
+}
+
+/* ==============================
+   LOGIN & REGISTER BUTTONS
+================================ */
+
+.header__right__auth {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 12px;
+}
+
+/* Remove the slash separator */
+.header__right__auth a + a::before {
+    content: none !important;
+    display: none !important;
+}
+
+.header__right__auth a {
+    display: inline-block;
+    margin-left: 0 !important;
+    padding: 11px 19px;
+    font-family: "Montserrat", sans-serif;
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    text-decoration: none !important;
+    transition: all 0.3s ease;
+}
+
+/* Login — outline button */
+
+.header__right__auth a:first-child {
+    color: #783B45 !important;
+    background: transparent;
+    border: 1px solid #783B45;
+}
+
+.header__right__auth a:first-child:hover {
+    background-color: #F4E8E7;
+    border-color: #984E59;
+    color: #984E59 !important;
+}
+
+/* Register — burgundy button */
+
+.header__right__auth a:last-child {
+    color: #FFFFFF !important;
+    background-color: #783B45;
+    border: 1px solid #783B45;
+}
+
+.header__right__auth a:last-child:hover {
+    background-color: #984E59;
+    border-color: #984E59;
+    box-shadow: 0 4px 12px rgba(120, 59, 69, 0.18);
+    transform: translateY(-1px);
+}
+
+.header__right__auth a::before {
+    content: none !important;
+}
+
+/* Header icons */
+
+.header__right__widget li span {
+    color: #783B45;
+}
+
+.header__right__widget .tip {
+    background-color: #783B45;
+    color: #FFFFFF;
+}
+
+/* ==============================
+   DROPDOWN MENU
+================================ */
+
+.header__menu ul li .dropdown {
+    background-color: #FFFDFB;
+    border: 1px solid #E8D9D5;
+    box-shadow: 0 8px 20px rgba(48, 38, 39, 0.08);
+}
+
+.header__menu ul li .dropdown li a {
+    color: #302627 !important;
+}
+
+.header__menu ul li .dropdown li:hover > a {
+    color: #984E59 !important;
+    background-color: #F8EFED;
+}
+
+/* ==============================
+   MOBILE MENU
+================================ */
+
+.offcanvas-menu-wrapper {
+    background-color: #FFFDFB;
+}
+
+.offcanvas__auth {
+    display: flex;
+    gap: 10px;
+    padding: 15px 20px;
+}
+
+.offcanvas__auth a {
+    flex: 1;
+    padding: 12px 10px;
+    text-align: center;
+    font-family: "Montserrat", sans-serif;
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    text-decoration: none !important;
+    border: 1px solid #783B45;
+}
+
+.offcanvas__auth a:first-child {
+    color: #783B45;
+    background-color: transparent;
+}
+
+.offcanvas__auth a:last-child {
+    color: #FFFFFF;
+    background-color: #783B45;
+}
+
+.offcanvas__auth a:hover {
+    background-color: #984E59;
+    color: #FFFFFF !important;
+    border-color: #984E59;
+}
+
+.canvas__open {
+    color: #783B45;
+}
+
+.offcanvas__widget li span {
+    color: #783B45;
+}
+
+/* ==============================
+   MAIN BANNER
+================================ */
+
+.banner {
+    min-height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.banner .container,
+.banner__text {
+    text-align: center;
+}
+
+/* ==============================
+   FOOTER
+================================ */
+
+.footer {
+    background-color: #FFFDFB !important;
+    border-top: 1px solid #E8D9D5;
+}
+
+.footer__widget h6,
+.footer__newslatter h6 {
+    color: #783B45;
+    font-family: "Montserrat", sans-serif;
+    letter-spacing: 1px;
+}
+
+.footer__widget ul li a {
+    color: #625457;
+}
+
+.footer__widget ul li a:hover {
+    color: #984E59;
+}
+
+.footer__about p {
+    color: #625457;
+}
+
+/* Newsletter */
+
+.footer__newslatter input {
+    background-color: #FFFFFF;
+    border: 1px solid #D8C6C4;
+    color: #302627;
+}
+
+.footer__newslatter input::placeholder {
+    color: #9A898B;
+}
+
+.footer__newslatter .site-btn {
+    background-color: #783B45;
+    color: #FFFFFF;
+    border: none;
+    transition: background-color 0.3s ease;
+}
+
+.footer__newslatter .site-btn:hover {
+    background-color: #984E59;
+}
+
+/* Social icons */
+
+.footer__social a {
+    color: #783B45;
+}
+
+.footer__social a:hover {
+    color: #BD777E;
+}
+
+/* Copyright */
+
+.footer__copyright__text {
+    border-top: 1px solid #E8D9D5;
+}
+
+.footer__copyright__text p {
+    color: #817174;
+}
+
+.footer__copyright__text a {
+    color: #783B45;
+}
+
+/* ==============================
+   GENERAL BUTTONS
+================================ */
+
+.site-btn {
+    background-color: #783B45;
+    color: #FFFFFF;
+    border: none;
+    transition: background-color 0.3s ease;
+}
+
+.site-btn:hover {
+    background-color: #984E59;
+    color: #FFFFFF;
+}
+
+/* ==============================
+   RESPONSIVE
+================================ */
+
+@media screen and (max-width: 991px) {
+    .header__menu {
+        background-color: #FFFDFB;
+    }
+}
+
+
+/* Remove the separator between Login and Register */
+.header__right__auth a::before,
+.header__right__auth a::after {
+    content: none !important;
+    display: none !important;
+}
+/* Keep header items on the same line */
+@media screen and (min-width: 992px) {
+    .header .container-fluid > .row {
+        display: flex;
+        align-items: center;
+        flex-wrap: nowrap;
+    }
+
+    .header .container-fluid > .row > div {
+        flex-shrink: 0;
+    }
+
+    .header .container-fluid > .row > div:nth-child(1) {
+        width: 16%;
+    }
+
+    .header .container-fluid > .row > div:nth-child(2) {
+        width: 55%;
+    }
+
+    .header .container-fluid > .row > div:nth-child(3) {
+        width: 29%;
+    }
+
+    .header__right {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        flex-wrap: nowrap;
+        gap: 15px;
+    }
+
+    .header__right__auth,
+    .header__right__widget {
+        flex-shrink: 0;
+        margin-bottom: 0;
+    }
+
+    .header__right__widget {
+        display: flex;
+        align-items: center;
+    }
+
+    .header__right__widget li {
+        margin-bottom: 0;
+    }
+
+    .header__menu ul {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: nowrap;
+        white-space: nowrap;
+    }
+}
+
+
+/* Header logo */
+.header .header__logo img {
+    max-height: 60px;
+    width: auto;
+}
+
+.header .header__logo {
+    padding: 2px 0;
+    margin-left: -15px;
+}
+
+/* Navigation text */
+.header__menu > ul > li > a {
+    padding: 14px 0;
+    font-size: 14px !important;
+    letter-spacing: 0.6px;
+}
+
+/* Login and Register buttons */
+.header__right__auth {
+    gap: 16px;
+}
+
+.header__right__auth a {
+    padding: 8px 15px;
+    font-size: 11px;
+}
+
+/* Compact header */
+.header {
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+}
+
+.header__right {
+    align-items: center;
+}
+
+.header__right__widget {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+
+    </style>
+
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+
+</head>
+
+<body>
+    <form id="form1" runat="server">
+        <div>
+
+            <!-- Offcanvas Menu Begin -->
+
+            <div class="offcanvas-menu-overlay"></div>
+
+            <div class="offcanvas-menu-wrapper">
+
+                <div class="offcanvas__close">+</div>
+
+                <ul class="offcanvas__widget">
+                    <li><span class="icon_search search-switch"></span></li>
+                    <li>
+                        <a href="#">
+                            <span class="icon_heart_alt"></span>
+                            <%--<div class="tip">2</div>--%>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <span class="icon_bag_alt"></span>
+                            <%--<div class="tip">2</div>--%>
+                        </a>
+                    </li>
+                </ul>
+
+                <div class="offcanvas__logo">
+                    <a href="home.aspx">
+                       <img src="Photos/logonoir.png" alt="NOIRÉ">
+                    </a>
+                </div>
+
+                <div id="mobile-menu-wrap"></div>
+
+                <div class="offcanvas__auth">
+                    <a href="Login.aspx">Login</a>
+                    <a href="UserRegister.aspx">Register</a>
+                </div>
+
+            </div>
+
+            <!-- Offcanvas Menu End -->
+
+
+            <!-- Header Section Begin -->
+
+            <header class="header">
+
+                <div class="container-fluid">
+
+                    <div class="row">
+
+                        <div class="col-xl-3 col-lg-2">
+                            <div class="header__logo">
+                                <a href="home.aspx">
+                                   <img src="Photos/logonoir.png" alt="NOIRÉ">
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="col-xl-6 col-lg-7">
+
+                            <nav class="header__menu">
+                                <ul>
+                                    <li class="active">
+                                        <a href="home.aspx">Home</a>
+                                    </li>
+                                    <li><a href="#">Perfumes</a></li>
+                                    <li><a href="#">Oud</a></li>
+                                    <li><a href="#">Scented Candles</a></li>
+                                    <li><a href="#">Reed Diffusers</a></li>
+                                    <li><a href="#">Gift Sets</a></li>
+                                </ul>
+                            </nav>
+
+                        </div>
+
+                        <div class="col-lg-3">
+
+                            <div class="header__right">
+
+                                <div class="header__right__auth">
+                                    <a href="Login.aspx">Login</a>
+                                    <a href="UserRegister.aspx">Register</a>
+                                </div>
+
+                                <ul class="header__right__widget">
+                                    <li><span class="icon_search search-switch"></span></li>
+                                    <li>
+                                        <a href="#">
+                                            <span class="icon_heart_alt"></span>
+                                            <div class="tip">2</div>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="AddtoCart.aspx">
+                                            <span class="icon_bag_alt"></span>
+                                            <div class="tip">2</div>
+                                        </a>
+                                    </li>
+                                </ul>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <div class="canvas__open">
+                        <i class="fa fa-bars"></i>
+                    </div>
+
+                </div>
+
+            </header>
+
+            <!-- Header Section End -->
+
+
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+
+
+            <!-- Footer Section Begin -->
+
+            <footer class="footer">
+
+                <div class="container">
+
+                    <div class="row">
+
+                        <div class="col-lg-4 col-md-6 col-sm-7">
+
+                            <div class="footer__about">
+
+                                <div class="footer__logo">
+                                    <a href="home.aspx">
+                                       <img src="Photos/logonoir.png" alt="NOIRÉ">
+                                    </a>
+                                </div>
+
+                                <p>Discover your signature scent with NOIRÉ luxury fragrances, timeless aromas, and elegant home scents.</p>
+
+                                <div class="footer__payment">
+                                    <a href="#"><img src="img/payment/payment-1.png" alt=""></a>
+                                    <a href="#"><img src="img/payment/payment-2.png" alt=""></a>
+                                    <a href="#"><img src="img/payment/payment-3.png" alt=""></a>
+                                    <a href="#"><img src="img/payment/payment-4.png" alt=""></a>
+                                    <a href="#"><img src="img/payment/payment-5.png" alt=""></a>
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                        <div class="col-lg-2 col-md-3 col-sm-5">
+
+                            <div class="footer__widget">
+                                <h6>Quick Links</h6>
+                                <ul>
+                                    <li><a href="#">About</a></li>
+                                    <li><a href="#">Journal</a></li>
+                                    <li><a href="#">Contact</a></li>
+                                    <li><a href="#">FAQ</a></li>
+                                </ul>
+                            </div>
+
+                        </div>
+
+                        <div class="col-lg-2 col-md-3 col-sm-4">
+
+                            <div class="footer__widget">
+                                <h6>Account</h6>
+                                <ul>
+                                    <li><a href="#">My Account</a></li>
+                                    <li><a href="#">Orders Tracking</a></li>
+                                    <li><a href="#">Checkout</a></li>
+                                    <li><a href="#">Wishlist</a></li>
+                                </ul>
+                            </div>
+
+                        </div>
+
+                        <div class="col-lg-4 col-md-8 col-sm-8">
+
+                            <div class="footer__newslatter">
+                                <h6>NOIRÉ NEWSLETTER</h6>
+
+                                <form action="#">
+                                    <input type="text" placeholder="Email">
+                                    <button type="submit" class="site-btn">Subscribe</button>
+                                </form>
+
+                                <div class="footer__social">
+                                    <a href="#"><i class="fa fa-facebook"></i></a>
+                                    <a href="#"><i class="fa fa-twitter"></i></a>
+                                    <a href="#"><i class="fa fa-youtube-play"></i></a>
+                                    <a href="#"><i class="fa fa-instagram"></i></a>
+                                    <a href="#"><i class="fa fa-pinterest"></i></a>
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="footer__copyright__text">
+                                <p>
+                                    Copyright &copy;
+                                    <script>document.write(new Date().getFullYear());</script>
+                                    NOIRÉ. All rights reserved.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </footer>
+
+            <!-- Footer Section End -->
+
+        </div>
+    </form>
+</body>
+</html>
+
