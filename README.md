@@ -1,6 +1,6 @@
 # NOIRÉ – Fragrance E-Commerce Website
 
-NOIRÉ is an ongoing e-commerce web application for exploring and purchasing fragrances. The project focuses on a clean, elegant shopping experience with a dark burgundy-themed design.
+NOIRÉ is an e-commerce web application for exploring and purchasing fragrances. The project focuses on a clean, elegant shopping experience with a dark burgundy-themed design.
 
 ## Technologies Used
 - C#
@@ -21,7 +21,7 @@ NOIRÉ is an ongoing e-commerce web application for exploring and purchasing fra
 - Database integration
 
 ## Project Status
-🚧 In Progress
+🚧 Completed
 
 This project is being developed as part of my learning journey in ASP.NET web development.
 
